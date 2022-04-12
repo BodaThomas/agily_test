@@ -95,9 +95,9 @@
   border-radius: 18px;
 }
 
-.today-weather-block-header-icon {
-  height: 80px;
-  width: 80px;
+.weather-icon {
+  height: 60px;
+  width: 60px;
 }
 
 .today-weather-block-content {
@@ -112,4 +112,47 @@
 .today-weather-block-content-column {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.weather-view {
+  display: flex;
+}
+
+.weather-view-content {
+  display: flex;
+  background-color: aqua;
+}
+
+.weather-view-content-column {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  margin-right: 10;
+}
+
+.weather-block {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(34, 68, 15);
+  border: none;
+  border-radius: 18px;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 40px;
+  margin-top: 10px;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.weather-block-title {
+  font-weight: bold;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.weather-block-temp {
+  font-weight: bold;
+  font-size: xx-large;
+  margin: 0;
 }

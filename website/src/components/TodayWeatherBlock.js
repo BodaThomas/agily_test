@@ -5,7 +5,7 @@ const TodayWeatherBlock = ({data}) => {
     return (
         <div className="today-weather-block">
             <div className="today-weather-block-header">
-                <img className="today-weather-block-header-icon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png?appid=db988691faf182dfc3750cd1e57f3718`} alt='Weather icon' />
+                <img className="weather-icon" src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png?appid=db988691faf182dfc3750cd1e57f3718`} alt='Weather icon' />
                 <h2 className="today-weather-block-header-title">{new Date().toLocaleDateString('fr')}</h2>
             </div>
             <div className="today-weather-block-content">
