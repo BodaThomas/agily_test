@@ -48,4 +48,5 @@
 .input-icon {
   fill: rgb(34, 68, 15);
   margin-right: 10px;
+  cursor: pointer;
 }
