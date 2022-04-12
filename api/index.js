@@ -1,6 +1,7 @@
 const express = require('express');
 const cache = require('node-cache');
-const axios = require('axios');
+
+const weatherApi = require('./weatherApi');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,6 +21,28 @@ app.get('/', (_, res) => {
     res.json({
         message: 'Hello World!'
     });
+});
+
+app.get('/weather/:city', async (req, res) => {
+    const city = req.params.city;
+    const cached = myCache.get(city);
+
+    if (cached) {
+        res.json(cached);
+    } else {
+        const coordinates = await weatherApi.getCityCoordinates(city);
+
+        if (coordinates) {
+            const weather = await weatherApi.getWeather(coordinates.lat, coordinates.lon);
+
+            myCache.set(city, weather);
+            res.json(weather);
+        } else {
+            res.status(404).json({
+                message: 'City not found'
+            });
+        }
+    }
 });
 
 app.listen(port, () => {
