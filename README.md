@@ -15,7 +15,7 @@ Celui-ci comporte également un dossier `views` dans lequel j'ai créé les diff
 Pour la réalisation de ce test technique, j'ai voulu respecter les consignes données en essayant de me fixer une limite de 4h de travail.
 
 J'ai passé environ 3h30 sur la partie web de ce test.
-Et 30min sur la partie API.
+Et 30min sur la partie API, que je n'ai pas eu le temps de terminer.
 
 ## Difficultés rencontrées
 
