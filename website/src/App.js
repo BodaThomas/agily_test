@@ -1,15 +1,26 @@
-import {Input} from './components'
+import React, {useEffect, useState} from 'react';
 import './App.css';
-import searchIcon from './assets/searchIcon.svg'
+import {HomepageView, WeatherView} from './views'
+
+import {getCityCoordinates, getWeather} from './api';
 
 function App() {
+  const [city, setCity] = useState('Paris');
+  const [weather, setWeather] = useState(null);
+
+  console.log(weather);
+  useEffect(() => {
+    if (city) {
+      getCityCoordinates(city)
+        .then(data => getWeather(data.lat, data.lon))
+        .then(setWeather);
+    }
+  }, [city]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 className="website-title">The Forecast<br/>Weather App</h1>
-        <Input placeholder="Search" icon={searchIcon} />
-      </header>
-    </div>
+    weather ?
+      <WeatherView setCity={setCity} city={city} setWeather={setWeather} weather={weather} /> :
+      <HomepageView city={city} setCity={setCity} />
   );
 }
 
