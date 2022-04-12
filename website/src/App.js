@@ -8,7 +8,6 @@ function App() {
   const [city, setCity] = useState('Paris');
   const [weather, setWeather] = useState(null);
 
-  console.log(weather);
   useEffect(() => {
     if (city) {
       getCityCoordinates(city)

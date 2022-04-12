@@ -1,7 +1,6 @@
 import React from 'react';
 
 const TodayWeatherBlock = ({data}) => {
-    console.log(data)
     return (
         <div className="today-weather-block">
             <div className="today-weather-block-header">
