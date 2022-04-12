@@ -50,3 +50,66 @@
   margin-right: 10px;
   cursor: pointer;
 }
+
+.weather-view {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(78, 195, 10);
+  border: none;
+}
+
+.back-button {
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background-color: rgb(34, 68, 15);
+  outline: none;
+  border-radius: 100%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.today-weather-block {
+  flex-direction: column;
+  background-color: rgb(34, 68, 15);
+  border: none;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  color: white;
+  padding: 10px 40px;
+  font-weight: bold;
+  margin-left: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.today-weather-block-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(34, 68, 15);
+  border: none;
+  border-radius: 18px;
+}
+
+.today-weather-block-header-icon {
+  height: 80px;
+  width: 80px;
+}
+
+.today-weather-block-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgb(34, 68, 15);
+  border: none;
+  border-radius: 18px;
+}
+
+.today-weather-block-content-column {
+  margin-right: 10px;
+  margin-left: 10px;
+}
